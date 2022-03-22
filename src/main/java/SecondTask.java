@@ -42,7 +42,7 @@ public class SecondTask {
         int limit = sc.nextInt();
 
         Thread threadA = new Thread( () ->{
-            while (counter < limit ) {
+            while (counter <= limit ) {
                 try {
                     semaphore.acquire();
                 } catch (InterruptedException e) {
@@ -54,7 +54,7 @@ public class SecondTask {
         });
 
         Thread threadB = new Thread( () ->{
-            while (counter < limit ) {
+            while (counter <= limit ) {
                 try {
                     semaphore.acquire();
                 } catch (InterruptedException e) {
@@ -66,7 +66,7 @@ public class SecondTask {
         });
 
         Thread threadC = new Thread( () ->{
-            while (counter < limit ) {
+            while (counter <= limit ) {
                 try {
                     semaphore.acquire();
                 } catch (InterruptedException e) {
@@ -78,7 +78,7 @@ public class SecondTask {
         });
 
         Thread threadD = new Thread( () ->{
-            while (counter < limit ) {
+            while (counter <= limit ) {
                 try {
                     semaphore.acquire();
                 } catch (InterruptedException e) {
